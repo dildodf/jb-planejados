@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagLu - Cozinha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="banner">
+            <div class="banner-placeholder">
+                <h1>MagLu Móveis Planejados</h1>
+            </div>
+        </div>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul id="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="institucional.html">Institucional</a></li>-->
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
+                    <ul>
+                        <li><a href="sala.html">Sala</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="banheiro.html">Banheiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="institucional.html">Sobre Nós</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <h1>Cozinha</h1>
+            
+            <div class="content-section">
+                <p>Transforme sua cozinha em um espaço funcional e elegante com nossos móveis planejados. Oferecemos soluções completas que incluem armários aéreos e de piso, bancadas, despensas, ilhas e nichos para eletrodomésticos, tudo pensado para facilitar seu dia a dia.</p>
+                <p>Nossos projetos de cozinha são desenvolvidos com materiais de alta qualidade e resistentes à umidade, proporcionando durabilidade, praticidade e design que valoriza seu imóvel.</p>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 30px;">Nossa Galeria de Cozinhas</h2>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Cozinha+Moderna" alt="Cozinha Moderna">
+                    <div class="gallery-description">
+                        <h3>Cozinha Moderna</h3>
+                        <p>Design clean com acabamento em laca branca, bancada de quartzo e armários com abertura touch para máxima praticidade.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Cozinha+Americana" alt="Cozinha Americana">
+                    <div class="gallery-description">
+                        <h3>Cozinha Americana</h3>
+                        <p>Integração perfeita com sala, bancada gourmet com banquetas e nichos abertos para decoração e funcionalidade.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Cozinha+Compacta" alt="Cozinha Compacta">
+                    <div class="gallery-description">
+                        <h3>Cozinha Compacta</h3>
+                        <p>Aproveitamento máximo do espaço com armários até o teto, gavetas organizadoras e soluções inteligentes de armazenamento.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Cozinha+Gourmet" alt="Cozinha Gourmet">
+                    <div class="gallery-description">
+                        <h3>Cozinha Gourmet</h3>
+                        <p>Espaço amplo com ilha central, adega climatizada, churrasqueira e todos os equipamentos para quem ama cozinhar.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/00f2fe/ffffff?text=Cozinha+Clássica" alt="Cozinha Clássica">
+                    <div class="gallery-description">
+                        <h3>Cozinha Clássica</h3>
+                        <p>Elegância atemporal com armários em madeira maciça, puxadores decorativos e despensa integrada ao projeto.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/43e97b/ffffff?text=Cozinha+Industrial" alt="Cozinha Industrial">
+                    <div class="gallery-description">
+                        <h3>Cozinha Industrial</h3>
+                        <p>Estilo urbano com acabamento em inox, prateleiras abertas e iluminação trilho para um visual moderno e despojado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
+            </div>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+             <!-- <div class="footer-cookie">
+                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
+            </div>-->
+            <div class="footer-copyright">
+                Copyright © 2025 | MagLu - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gerenciamento de Cookies
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies aceitos');
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies recusados');
+        }
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const parent = event.target.parentElement;
+                parent.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>

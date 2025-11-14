@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagLu - Sobre Nós</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="banner">
+            <div class="banner-placeholder">
+                <h1>MagLu Móveis Planejados</h1>
+            </div>
+        </div>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul id="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="institucional.html">Institucional</a></li>-->
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
+                    <ul>
+                        <li><a href="sala.html">Sala</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="banheiro.html">Banheiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="institucional.html">Sobre Nós</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <h1>Sobre Nós</h1>
+            
+            <div class="content-section">
+                <h2>Nossa Missão</h2>
+                <p>Na MagLu, nossa missão é transformar ambientes em espaços únicos e funcionais através de móveis planejados de alta qualidade. Acreditamos que cada cliente merece um projeto personalizado que reflita seu estilo de vida e atenda suas necessidades específicas.</p>
+                <p>Trabalhamos com dedicação e excelência para oferecer soluções inovadoras em móveis planejados, combinando design sofisticado, funcionalidade e durabilidade. Nosso compromisso é superar as expectativas de nossos clientes em cada projeto que realizamos.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Nossa Dedicação</h2>
+                <p>Com anos de experiência no mercado de móveis planejados, a MagLu se destaca pela dedicação incondicional à satisfação do cliente. Desde a primeira consulta até a instalação final, acompanhamos cada etapa do processo para garantir que o resultado seja exatamente o que você imaginou.</p>
+                <p>Nossa equipe de profissionais qualificados trabalha com as melhores matérias-primas do mercado, utilizando tecnologia de ponta e técnicas modernas de fabricação. Cada projeto é cuidadosamente planejado e executado com precisão, atenção aos detalhes e acabamento impecável.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Construindo os Melhores Móveis Planejados</h2>
+                <p>Na MagLu, entendemos que móveis planejados são mais do que simples peças de decoração – eles são investimentos que transformam a forma como você vive e utiliza seus espaços. Por isso, nos dedicamos a criar soluções que maximizam o aproveitamento de cada ambiente, sem comprometer o estilo e a elegância.</p>
+                <p>Oferecemos uma ampla variedade de opções de acabamentos, cores e materiais para que você possa criar o ambiente dos seus sonhos. Seja para sala, quarto, escritório, cozinha ou banheiro, temos a solução perfeita para você.</p>
+                <p>Nosso compromisso vai além da entrega do produto. Buscamos estabelecer uma relação de confiança e parceria com nossos clientes, oferecendo suporte completo e garantia de qualidade em todos os nossos serviços.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Nossos Valores</h2>
+                <p><strong>Qualidade:</strong> Utilizamos apenas materiais de primeira linha e mão de obra especializada.</p>
+                <p><strong>Inovação:</strong> Estamos sempre em busca das últimas tendências e tecnologias em móveis planejados.</p>
+                <p><strong>Compromisso:</strong> Cumprimos prazos e mantemos nossos clientes informados em todas as etapas do projeto.</p>
+                <p><strong>Personalização:</strong> Cada projeto é único e desenvolvido especialmente para atender suas necessidades.</p>
+                <p><strong>Sustentabilidade:</strong> Trabalhamos com fornecedores responsáveis e processos que respeitam o meio ambiente.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
+            </div>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-cookie">
+                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
+            </div>-->
+            <div class="footer-copyright">
+                Copyright © 2025 | MagLu - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gerenciamento de Cookies
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies aceitos');
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies recusados');
+        }
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const parent = event.target.parentElement;
+                parent.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>

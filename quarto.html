@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagLu - Quarto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="banner">
+            <div class="banner-placeholder">
+                <h1>MagLu Móveis Planejados</h1>
+            </div>
+        </div>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul id="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="institucional.html">Institucional</a></li>-->
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
+                    <ul>
+                        <li><a href="sala.html">Sala</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="banheiro.html">Banheiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="institucional.html">Sobre Nós</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <h1>Quarto</h1>
+            
+            <div class="content-section">
+                <p>Crie o quarto dos seus sonhos com nossos móveis planejados. Oferecemos soluções completas que incluem guarda-roupas, cabeceiras, criados-mudos, penteadeiras e muito mais, tudo desenvolvido para proporcionar conforto, organização e estilo.</p>
+                <p>Nossos projetos são pensados para maximizar o espaço disponível, criar ambientes relaxantes e atender às necessidades específicas de cada cliente, seja para quartos de casal, infantis ou de hóspedes.</p>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 30px;">Nossa Galeria de Quartos</h2>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Quarto+de+Casal" alt="Quarto de Casal">
+                    <div class="gallery-description">
+                        <h3>Quarto de Casal</h3>
+                        <p>Ambiente amplo e sofisticado com guarda-roupa de portas de correr, cabeceira estofada e criados-mudos integrados.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Quarto+Infantil" alt="Quarto Infantil">
+                    <div class="gallery-description">
+                        <h3>Quarto Infantil</h3>
+                        <p>Projeto colorido e funcional com cama elevada, escrivaninha para estudos e armários com muito espaço para brinquedos.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Quarto+de+Adolescente" alt="Quarto de Adolescente">
+                    <div class="gallery-description">
+                        <h3>Quarto de Adolescente</h3>
+                        <p>Design moderno e despojado com área de estudos integrada, prateleiras para livros e espaço para games.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Closet" alt="Closet">
+                    <div class="gallery-description">
+                        <h3>Closet</h3>
+                        <p>Closet completo com nichos, gavetas, cabideiros e iluminação especial para organizar todas as suas roupas e acessórios.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/00f2fe/ffffff?text=Quarto+Compacto" alt="Quarto Compacto">
+                    <div class="gallery-description">
+                        <h3>Quarto Compacto</h3>
+                        <p>Solução inteligente para espaços pequenos, com guarda-roupa otimizado e cama com gavetas inferiores.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/43e97b/ffffff?text=Suíte+Master" alt="Suíte Master">
+                    <div class="gallery-description">
+                        <h3>Suíte Master</h3>
+                        <p>Luxo e conforto com painel de TV, penteadeira iluminada e armários planejados que aproveitam cada centímetro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
+            </div>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-cookie">
+                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
+            </div>-->
+            <div class="footer-copyright">
+                Copyright © 2025 | MagLu - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gerenciamento de Cookies
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies aceitos');
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies recusados');
+        }
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const parent = event.target.parentElement;
+                parent.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>

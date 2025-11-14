@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagLu - Sala de Estar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="banner">
+            <div class="banner-placeholder">
+                <h1>MagLu Móveis Planejados</h1>
+            </div>
+        </div>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul id="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="institucional.html">Institucional</a></li>-->
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
+                    <ul>
+                        <li><a href="sala.html">Sala</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="banheiro.html">Banheiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="institucional.html">Sobre Nós</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <h1>Sala de Estar</h1>
+            
+            <div class="content-section">
+                <p>Transforme sua sala de estar em um ambiente acolhedor e elegante com nossos móveis planejados. Oferecemos soluções personalizadas que combinam funcionalidade, conforto e design moderno, criando o espaço perfeito para receber seus convidados e relaxar com a família.</p>
+                <p>Nossos projetos para sala incluem estantes, painéis para TV, racks, aparadores e muito mais, tudo pensado para otimizar o espaço e criar um ambiente harmonioso e sofisticado.</p>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 30px;">Nossa Galeria de Salas</h2>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Sala+Moderna" alt="Sala Moderna">
+                    <div class="gallery-description">
+                        <h3>Sala Moderna</h3>
+                        <p>Design contemporâneo com linhas retas e acabamento clean. Painel para TV integrado com nichos decorativos e iluminação LED embutida.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Sala+Clássica" alt="Sala Clássica">
+                    <div class="gallery-description">
+                        <h3>Sala Clássica</h3>
+                        <p>Elegância atemporal com estante de madeira nobre, detalhes refinados e espaço para livros e objetos decorativos.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Sala+Compacta" alt="Sala Compacta">
+                    <div class="gallery-description">
+                        <h3>Sala Compacta</h3>
+                        <p>Solução inteligente para espaços reduzidos, com rack multifuncional e aproveitamento vertical do ambiente.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Sala+Integrada" alt="Sala Integrada">
+                    <div class="gallery-description">
+                        <h3>Sala Integrada</h3>
+                        <p>Projeto que integra sala de estar e jantar, com estante divisória que cria setores sem perder a amplitude.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/00f2fe/ffffff?text=Home+Theater" alt="Home Theater">
+                    <div class="gallery-description">
+                        <h3>Home Theater</h3>
+                        <p>Ambiente completo para entretenimento, com painel acústico, iluminação especial e móveis sob medida.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/43e97b/ffffff?text=Sala+de+TV" alt="Sala de TV">
+                    <div class="gallery-description">
+                        <h3>Sala de TV</h3>
+                        <p>Espaço aconchegante com rack amplo, nichos para equipamentos e cabos organizados de forma invisível.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
+            </div>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-cookie">
+                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
+            </div>-->
+            <div class="footer-copyright">
+                Copyright © 2025 | MagLu - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gerenciamento de Cookies
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies aceitos');
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies recusados');
+        }
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const parent = event.target.parentElement;
+                parent.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>

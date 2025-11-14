@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagLu - Escritório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="banner">
+            <div class="banner-placeholder">
+                <h1>MagLu Móveis Planejados</h1>
+            </div>
+        </div>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+            <ul id="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <!--<li><a href="institucional.html">Institucional</a></li>-->
+                <li class="dropdown">
+                    <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
+                    <ul>
+                        <li><a href="sala.html">Sala</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="banheiro.html">Banheiro</a></li>
+                    </ul>
+                </li>
+                <li><a href="institucional.html">Sobre Nós</a></li>
+                <li><a href="fale-conosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <h1>Escritório / Home Office</h1>
+            
+            <div class="content-section">
+                <p>Monte seu home office ideal com nossos móveis planejados. Criamos espaços de trabalho produtivos e confortáveis, com bancadas ergonômicas, estantes para livros e documentos, gaveteiros e soluções para organização de cabos e equipamentos.</p>
+                <p>Nossos projetos de escritório são desenvolvidos pensando em funcionalidade, conforto e design, proporcionando um ambiente que estimula a criatividade e aumenta sua produtividade no trabalho remoto ou presencial.</p>
+            </div>
+
+            <h2 style="margin-top: 40px; margin-bottom: 30px;">Nossa Galeria de Escritórios</h2>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Home+Office+Moderno" alt="Home Office Moderno">
+                    <div class="gallery-description">
+                        <h3>Home Office Moderno</h3>
+                        <p>Design contemporâneo com bancada ampla, nichos decorativos e sistema de iluminação LED integrado para trabalho.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Escritório+Executivo" alt="Escritório Executivo">
+                    <div class="gallery-description">
+                        <h3>Escritório Executivo</h3>
+                        <p>Elegância profissional com mesa em L, estante para livros em madeira nobre e armários com fechaduras.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Escritório+Compacto" alt="Escritório Compacto">
+                    <div class="gallery-description">
+                        <h3>Escritório Compacto</h3>
+                        <p>Solução inteligente para espaços pequenos, com bancada suspensa e prateleiras verticais que otimizam o ambiente.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Escritório+Compartilhado" alt="Escritório Compartilhado">
+                    <div class="gallery-description">
+                        <h3>Escritório Compartilhado</h3>
+                        <p>Projeto com duas estações de trabalho independentes, ideal para casais ou sócios que trabalham em casa.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/00f2fe/ffffff?text=Escritório+Criativo" alt="Escritório Criativo">
+                    <div class="gallery-description">
+                        <h3>Escritório Criativo</h3>
+                        <p>Ambiente inspirador com cores vibrantes, nichos expositivos e espaço para equipamentos de design e criação.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/400x300/43e97b/ffffff?text=Biblioteca+Office" alt="Biblioteca Office">
+                    <div class="gallery-description">
+                        <h3>Biblioteca Office</h3>
+                        <p>Combinação perfeita de biblioteca e escritório, com estantes do chão ao teto e mesa de estudos integrada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banner de Cookies -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
+            </div>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <!-- <div class="footer-cookie">
+                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
+            </div>-->
+            <div class="footer-copyright">
+                Copyright © 2025 | MagLu - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gerenciamento de Cookies
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies aceitos');
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('show');
+            console.log('Cookies recusados');
+        }
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        // Menu Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mainMenu');
+            menu.classList.toggle('active');
+        }
+        
+        function toggleDropdown(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault();
+                const parent = event.target.parentElement;
+                parent.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>
