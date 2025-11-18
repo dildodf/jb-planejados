@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MagLu - Fale Conosco</title>
+    <title>JB Móveis Planejados - Fale Conosco</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
         <div class="banner">
             <div class="banner-placeholder">
-                <h1>MagLu Móveis Planejados</h1>
+                <h1>JB Móveis Planejados</h1>
             </div>
         </div>
-        
+
         <!-- Menu de Navegação -->
         <nav>
             <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -24,11 +26,11 @@
                 <li class="dropdown">
                     <a href="#" onclick="toggleDropdown(event)">Nossos Serviços ▼</a>
                     <ul>
-                        <li><a href="sala.html">Sala</a></li>
-                        <li><a href="quarto.html">Quarto</a></li>
-                        <li><a href="escritorio.html">Escritório</a></li>
-                        <li><a href="cozinha.html">Cozinha</a></li>
                         <li><a href="banheiro.html">Banheiro</a></li>
+                        <li><a href="cozinha.html">Cozinha</a></li>
+                        <li><a href="escritorio.html">Escritório</a></li>
+                        <li><a href="quarto.html">Quarto</a></li>
+                        <li><a href="sala.html">Sala</a></li>
                     </ul>
                 </li>
                 <li><a href="institucional.html">Sobre Nós</a></li>
@@ -41,9 +43,10 @@
     <main>
         <div class="container">
             <h1>Fale Conosco</h1>
-            
+
             <div class="content-section">
-                <p style="text-align: center; font-size: 1.1rem;">Entre em contato conosco para solicitar um orçamento ou tirar suas dúvidas. Nossa equipe está pronta para atender você!</p>
+                <p style="text-align: center; font-size: 1.1rem;">Entre em contato conosco para solicitar um orçamento
+                    ou tirar suas dúvidas. Nossa equipe está pronta para atender você!</p>
             </div>
 
             <div class="form-container">
@@ -65,21 +68,71 @@
 
                     <div class="form-group">
                         <label for="assunto">Assunto *</label>
-                        <textarea id="assunto" name="assunto" required placeholder="Descreva o motivo do seu contato ou detalhe o orçamento desejado"></textarea>
+                        <textarea id="assunto" name="assunto" required
+                            placeholder="Descreva o motivo do seu contato ou detalhe o orçamento desejado"></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit">Enviar Mensagem</button>
                 </form>
+                <script>
+                    // Exemplo de envio para dois e-mails (simulação, pois HTML/JS puro não envia e-mails)
+                    function handleSubmit(event) {
+                        event.preventDefault();
+
+                        const nome = document.getElementById('nome').value;
+                        const telefone = document.getElementById('telefone').value;
+                        const email = document.getElementById('email').value;
+                        const assunto = document.getElementById('assunto').value;
+
+                        // Aqui você faria uma requisição AJAX para o backend enviar para dois e-mails
+                        // Exemplo de payload:
+                        /*
+                        fetch('/api/send-email', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                to: ['fagnermesquita.al@gmail.com', 'dossantos014.vds@gmail.com'],
+                                subject: 'Contato via site',
+                                message: `Nome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}\nAssunto: ${assunto}`
+                            })
+                        })
+                        */
+
+                        alert(`Mensagem enviada com sucesso para dois endereços!\n\nNome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}\n\nEntraremos em contato em breve!`);
+
+                        document.getElementById('contactForm').reset();
+                    }
+                </script>
+                <div style="margin-top: 20px; text-align: center;">
+                    <a href="#" id="whatsappLink" target="_blank" class="btn-whatsapp"
+                        style="display: inline-block; background: #25D366; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                        Enviar mensagem via WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
+        <script>
+            // WhatsApp API integration
+            function getWhatsappMessage() {
+                const nome = document.getElementById('nome').value;
+                const telefone = document.getElementById('telefone').value;
+                const email = document.getElementById('email').value;
+                const assunto = document.getElementById('assunto').value;
+                return `Olá, meu nome é ${nome}. Telefone: ${telefone}. E-mail: ${email}. Assunto: ${assunto}`;
+            }
+
+            document.getElementById('whatsappLink').addEventListener('click', function (e) {
+                const phoneNumber = '5561993550493'; // Substitua pelo número do WhatsApp da empresa
+                const message = encodeURIComponent(getWhatsappMessage());
+                this.href = `https://wa.me/${phoneNumber}?text=${message}`;
+            });
+        </script>
+
     </main>
 
     <!-- Banner de Cookies -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-banner-content">
-            <div class="cookie-banner-text">
-                <p>🍪 Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao clicar em "Aceitar", você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.</p>
-            </div>
             <div class="cookie-banner-buttons">
                 <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceitar</button>
                 <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Recusar</button>
@@ -90,11 +143,9 @@
     <!-- Rodapé -->
     <footer>
         <div class="footer-content">
-            <!-- <div class="footer-cookie">
-                Este website utiliza cookies para oferecer uma melhor experiência de navegação. Ao utilizar este website, você concorda com o uso de cookies, conforme descrito na nossa Política de Cookies.
-            </div>-->
+
             <div class="footer-copyright">
-                Copyright © 2025 | MagLu - Todos os direitos reservados
+                Copyright © 2025 | JB Móveis Planejados - Todos os direitos reservados
             </div>
         </div>
     </footer>
@@ -107,27 +158,27 @@
                 document.getElementById('cookieBanner').classList.add('show');
             }
         }
-        
+
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
             document.getElementById('cookieBanner').classList.remove('show');
             console.log('Cookies aceitos');
         }
-        
+
         function rejectCookies() {
             localStorage.setItem('cookieConsent', 'rejected');
             document.getElementById('cookieBanner').classList.remove('show');
             console.log('Cookies recusados');
         }
-        
+
         window.addEventListener('load', checkCookieConsent);
-        
+
         // Menu Mobile
         function toggleMenu() {
             const menu = document.getElementById('mainMenu');
             menu.classList.toggle('active');
         }
-        
+
         function toggleDropdown(event) {
             if (window.innerWidth <= 768) {
                 event.preventDefault();
@@ -139,21 +190,21 @@
         // Manipulação do formulário
         function handleSubmit(event) {
             event.preventDefault();
-            
+
             const nome = document.getElementById('nome').value;
             const telefone = document.getElementById('telefone').value;
             const email = document.getElementById('email').value;
             const assunto = document.getElementById('assunto').value;
-            
+
             // Simulação de envio (em produção, aqui seria feita a integração com backend)
             alert(`Mensagem enviada com sucesso!\n\nNome: ${nome}\nTelefone: ${telefone}\nE-mail: ${email}\n\nEntraremos em contato em breve!`);
-            
+
             // Limpar formulário
             document.getElementById('contactForm').reset();
         }
 
         // Máscara para telefone
-        document.getElementById('telefone').addEventListener('input', function(e) {
+        document.getElementById('telefone').addEventListener('input', function (e) {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length <= 11) {
                 value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
@@ -163,4 +214,5 @@
         });
     </script>
 </body>
+
 </html>
